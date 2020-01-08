@@ -1,0 +1,57 @@
+{{ define "Owner.users.new.layout" }}
+{{ template "Owner.navbar" . }}
+{{ template "Owner.users.new.content" . }}
+{{ template "Owner.footer" . }}
+{{ end }}
+
+{{ define "Owner.users.new.content"}}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2>Add New User</h2>
+    </div>
+    <div class="container">
+        <form method="POST" action="/Owner/users/new" enctype="multipart/form-data">
+            <div class="form-group row">
+
+                <label for="name" class="col-sm-2 col-form-label">UUID</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="uuid" id="uuid" placeholder="uuid">
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <label for="name" class="col-sm-2 col-form-label">User Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="fullname" id="fullname" placeholder="FullName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="+251">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary float-right">Add User</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+{{ end }}

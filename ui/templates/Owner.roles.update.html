@@ -1,0 +1,32 @@
+{{ define "Owner.roles.update.layout" }}
+{{ template "Owner.navbar" . }}
+{{ template "Owner.roles.update.content" . }}
+{{ template "Owner.footer" . }}
+{{ end }}
+
+{{ define "Owner.roles.update.content"}}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2>Update Menu Roles</h2>
+    </div>
+    <div class="container">
+        <form method="POST" action="/Owner/roles/update" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{{ .ID }}" />
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Role Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Role Name"
+                        value="{{ if .Name }} {{ .Name }} {{ end }}">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary float-right">Update Role</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+{{ end }}
