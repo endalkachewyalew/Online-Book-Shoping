@@ -5,6 +5,9 @@ import (
 	"github.com/Endalk/Online-Book-Shoping/user"
 )
 
+///This are all the fucntions defined 
+
+
 //UserServiceImpl -
 type UserServiceImpl struct {
 	repo user.Repository

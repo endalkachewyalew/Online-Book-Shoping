@@ -6,7 +6,7 @@ import (
 
 	"github.com/Endalk/Online-Book-Shoping/entity"
 )
-
+//Using local database for user reporsitory
 //PsqlUserRepository -
 type PsqlUserRepository struct {
 	conn *sql.DB
@@ -60,6 +60,7 @@ func (pr *PsqlUserRepository) UpdateUser(user entity.User) error {
 }
 
 //DeleteUser -
+
 func (pr *PsqlUserRepository) DeleteUser(username string) error {
 	query := "delete from users where username=$1"
 	_, err := pr.conn.Exec(query, username)

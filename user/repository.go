@@ -3,6 +3,7 @@ package user
 import "github.com/Endalk/Online-Book-Shoping/entity"
 
 //Repository -
+//The user repository for our database
 type Repository interface {
 	User(id string) (entity.User, error)
 	UpdateUser(user entity.User) error
