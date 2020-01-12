@@ -1,0 +1,2 @@
+# Online-Book-Shoping
+we are making online shoping  website for bookstore. here are features about our project ---users can rent a book and buy a book, edit thier order see discout books--- see on discount books --search books  ---comment and rate books---- =========Admins can remove Users and Authors if the are scammers  . =====Authors can sell book-----receive comments  ---get rating ----remove books --sell special season books discount books
