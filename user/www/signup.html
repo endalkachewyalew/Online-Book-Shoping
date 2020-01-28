@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="assets/images/favicon.ico">
+
+  <title>Dashboard Template for Bootstrap</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <center>
+    <form method="post" action="/save">
+      <div class="card">
+        <h2><b>Details</b></h2>
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputName">Full Name</label>
+        </div>
+        <input class="textbox" id="inputName" name="fullname" placeholder="Fullname" size="35"
+          value="{{.TargetUser.FullName}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputAuthor">Gender</label>
+        </div>
+        <input class="textbox" id="inputAuthor" size="35" name="gender" placeholder="Gender"
+          value="{{.TargetUser.Gender}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputPublicationDate">Date of Birth</label>
+
+        </div>
+        <input class="textbox" id="inputPublicationDate" size="35" name="dob" placeholder="YYYY-MM-DD"
+          value="{{.TargetUser.DateStr}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputAuthor">Country</label>
+
+        </div>
+        <input class="textbox" id="inputCountry" size="35" name="country" placeholder="Country"
+          value="{{.TargetUser.Country}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputcity">City</label>
+
+        </div>
+        <input class="textbox" id="inputcity" size="35" name="city" placeholder="City" value="{{.TargetUser.City}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputPages">Phone Number</label>
+
+        </div>
+        <input class="textbox" id="inputPages" size="35" name="pnumber" placeholder="Phone Number"
+          value="{{.TargetUser.PhoneNumber}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputEmail">Email</label>
+
+        </div>
+        <input class="textbox" id="inputEmail" size="35" name="email" placeholder="Email"
+          value="{{.TargetUser.Email}}" />
+        <br>
+        <div class="form-text-group">
+          <label class="form-text-group" for="inputpass">Password</label>
+
+        </div>
+        <input type="password"class="textbox" id="inputpass" size="35" name="password" placeholder="Password"
+          value="{{.TargetUser.Password}}" />
+        <br>
+        <div class="form-group">
+          <br>
+          <input type="checkbox" name="agree" value="true"> I agree above details.
+          <br>
+
+        </div>
+        <div class="form-group">
+          <a href="index.html"><button type="submit" class="btn_Submit">Submit</button></a>
+          <input class="btn_clear" type="reset" name="clear" value="Clear">
+        </div>
+
+      </div>
+    </form>
+  </center>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="assets/js/holder.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
