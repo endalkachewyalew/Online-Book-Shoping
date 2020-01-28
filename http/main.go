@@ -158,5 +158,5 @@ func main() {
 	router.PUT("/v1/admin/admins/:username", apiAdminAdminsHandler.PutAdmin)
 	router.POST("/v1/admin/admins", apiAdminAdminsHandler.PostAdmin)
 	router.DELETE("/v1/admin/admins/:username", apiAdminAdminsHandler.DeleteAdmin)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", router)
 }
